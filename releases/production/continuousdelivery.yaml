@@ -1,0 +1,20 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: continuousdelivery-production
+  namespace: production
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~0.1
+spec:
+  releaseName: continuousdelivery-development
+  chart:
+    git: https://github.com/SoftwareCraftsmen/continuousdelivery.git
+    path: helm/
+    ref: master
+  values:
+    image: softwarecraftsmen/continuousdelivery-app:latest
+    replicaCount: 3
+    hosts:
+      - continuousdelivery.production.10.18.58.14.xip.io

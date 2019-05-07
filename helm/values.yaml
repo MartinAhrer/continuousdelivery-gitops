@@ -20,7 +20,8 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - continuousdelivery2.demo.10.18.58.14.xip.io
+  - continuousdelivery.demo.10.18.58.14.xip.io
+
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -62,5 +63,5 @@ postgresql:
         secretKeyRef:
           name: datasource-secret
           key: password
-  initdbScriptsConfigMap: continuousdelivery2
+  initdbScriptsConfigMap: continuousdelivery
 

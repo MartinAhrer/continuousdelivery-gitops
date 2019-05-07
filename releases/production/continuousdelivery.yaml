@@ -8,13 +8,18 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~0.1
 spec:
-  releaseName: continuousdelivery-development
+  releaseName: continuousdelivery-production
   chart:
-    git: https://github.com/SoftwareCraftsmen/continuousdelivery.git
+    git: git@github.com:MartinAhrer/continuousdelivery-gitops.git
     path: helm/
     ref: master
   values:
-    image: softwarecraftsmen/continuousdelivery-app:latest
+    image:
+      repository: softwarecraftsmen/continuousdelivery-app
+      tag: production-1-a098138
     replicaCount: 3
-    hosts:
-      - continuousdelivery.production.10.18.58.14.xip.io
+    ingress:
+      hosts:
+      - continuousdelivery-production.10.18.58.14.xip.io
+    postgresql:
+      initdbScriptsConfigMap: continuousdelivery-production

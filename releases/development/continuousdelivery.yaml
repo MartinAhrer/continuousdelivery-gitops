@@ -10,9 +10,9 @@ metadata:
 spec:
   releaseName: continuousdelivery-development
   chart:
-    git: git@github.com:MartinAhrer/continuousdelivery-gitops.git
-    path: helm/
-    ref: master
+    git: https://github.com/SoftwareCraftsmen/continuousdelivery.git
+    path: src/main/helm
+    ref: feature/issue-7-Add_kubernetes_manifest
   values:
     replicaCount: 1
     image:

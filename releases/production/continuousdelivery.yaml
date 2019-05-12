@@ -5,7 +5,6 @@ metadata:
   name: continuousdelivery-production
   namespace: production
   annotations:
-    flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~0.1
 spec:
   releaseName: continuousdelivery-production

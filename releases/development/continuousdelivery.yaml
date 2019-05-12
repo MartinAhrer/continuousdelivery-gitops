@@ -5,7 +5,6 @@ metadata:
   name: continuousdelivery-development
   namespace: development
   annotations:
-    flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: glob:development-*
 spec:
   releaseName: continuousdelivery-development

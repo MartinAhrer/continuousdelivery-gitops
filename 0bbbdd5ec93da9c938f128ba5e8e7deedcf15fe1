@@ -1,0 +1,1 @@
+{"jobID":"404ffca6-c97f-ae6f-f483-a172965a330e","spec":{"type":"policy","cause":{"Message":"","User":"Martin Ahrer \u003cmartin.ahrer@software-craftsmen.at\u003e"},"spec":{"development:helmrelease/continuousdelivery-development":{"add":{},"remove":{"automated":"true"}}}},"result":null}
